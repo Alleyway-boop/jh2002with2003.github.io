@@ -1,0 +1,680 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Java基础！ | 远方小屋`Blog</title><meta name="keywords" content="Java"><meta name="author" content="QingYu"><meta name="copyright" content="QingYu"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="一、修饰符1、finalfinal关键字是最终的意思，可以修饰成员方法，成员变量，类​    final修饰的特点：  修饰方法：表面该方法是最终的方法，不能被重写 修饰变量：表明该变量是常量，不能再次被赋值 修饰类：表明该类是最终类，不能被继承  final修饰局部变量 变量是基本数据类型：final修饰指的是基本数据类型的数据值不能发生改变 变量是引用数据类型：final修饰指的是音乐数据类型">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java基础！">
+<meta property="og:url" content="http://example.com/posts/2.html">
+<meta property="og:site_name" content="远方小屋&#96;Blog">
+<meta property="og:description" content="一、修饰符1、finalfinal关键字是最终的意思，可以修饰成员方法，成员变量，类​    final修饰的特点：  修饰方法：表面该方法是最终的方法，不能被重写 修饰变量：表明该变量是常量，不能再次被赋值 修饰类：表明该类是最终类，不能被继承  final修饰局部变量 变量是基本数据类型：final修饰指的是基本数据类型的数据值不能发生改变 变量是引用数据类型：final修饰指的是音乐数据类型">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://files.catbox.moe/snn0kr.png">
+<meta property="article:published_time" content="2022-09-02T00:00:00.000Z">
+<meta property="article:modified_time" content="2022-09-02T14:10:32.962Z">
+<meta property="article:author" content="QingYu">
+<meta property="article:tag" content="编程">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://files.catbox.moe/snn0kr.png"><link rel="shortcut icon" href="/img/WebIcon.png"><link rel="canonical" href="http://example.com/posts/2"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Java基础！',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-09-02 14:10:32'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu@1.0.6/lib/clock.min.css" /><link rel="stylesheet" href="https://npm.elemecdn.com/anzhiyu-blog@2.0.3/css/runtime/runtime.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-wowjs/lib/animate.min.css" media="print" onload="this.media='screen'"><link rel="stylesheet" href="https://cdn.cbd.int/hexo-filter-gitcalendar/lib/gitcalendar.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://cdn.cbd.int/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="远方小屋`Blog" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/favicon.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/bangumis/index.html"><i class="fa-fw fas fa-home"></i><span> 番剧</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-envelope"></i><span> 留言板</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://files.catbox.moe/snn0kr.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">远方小屋`Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/bangumis/index.html"><i class="fa-fw fas fa-home"></i><span> 番剧</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-envelope"></i><span> 留言板</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Java基础！</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-09-02T00:00:00.000Z" title="发表于 2022-09-02 00:00:00">2022-09-02</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-09-02T14:10:32.962Z" title="更新于 2022-09-02 14:10:32">2022-09-02</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Java基础！"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="一、修饰符"><a href="#一、修饰符" class="headerlink" title="一、修饰符"></a>一、修饰符</h2><h4 id="1、final"><a href="#1、final" class="headerlink" title="1、final"></a>1、<strong>final</strong></h4><h4 id="final关键字是最终的意思，可以修饰成员方法，成员变量，类"><a href="#final关键字是最终的意思，可以修饰成员方法，成员变量，类" class="headerlink" title="final关键字是最终的意思，可以修饰成员方法，成员变量，类"></a>final关键字是最终的意思，可以修饰成员方法，成员变量，类</h4><p>​    <strong>final</strong>修饰的特点：</p>
+<ul>
+<li>修饰方法：表面该方法是最终的方法，<strong><em>不能被重写</em></strong></li>
+<li>修饰变量：表明该变量是常量，<strong><em>不能再次被赋值</em></strong></li>
+<li>修饰类：表明该类是最终类，<strong><em>不能被继承</em></strong></li>
+</ul>
+<h4 id="final修饰局部变量"><a href="#final修饰局部变量" class="headerlink" title="final修饰局部变量"></a><strong>final</strong>修饰局部变量</h4><ul>
+<li>变量是基本数据类型：final修饰指的是基本数据类型的<strong><em>数据值</em></strong>不能发生改变</li>
+<li>变量是引用数据类型：final修饰指的是音乐数据类型的<strong><em>地址值</em></strong>不能发生改变，但是地址值里面的内容是可以发生改变的</li>
+</ul>
+<h4 id="2、static"><a href="#2、static" class="headerlink" title="2、static"></a>2、static</h4><h4 id="static关键字是静态的意思，可以修饰成员方法，成员变量"><a href="#static关键字是静态的意思，可以修饰成员方法，成员变量" class="headerlink" title="static关键字是静态的意思，可以修饰成员方法，成员变量"></a><strong><em>static</em></strong>关键字是静态的意思，可以修饰成员方法，成员变量</h4><p>​    <strong><em>static</em></strong>修饰的特点：</p>
+<pre><code>    + 该类的所有对象共享
+</code></pre><p>​            这也是判断是否使用静态关键字的条件</p>
+<ul>
+<li>可以通过类名调用</li>
+</ul>
+<p>​            也可以通过对象名调用</p>
+<p>​    <strong><em>static</em></strong>访问特点：</p>
+<p>​        非静态的成员方法：（没有被static修饰符修饰过的成员方法）</p>
+<ul>
+<li>能访问静态的成员变量</li>
+<li>能访问非静态的成员变量</li>
+<li>能访问静态的成员方法</li>
+<li>能访问非静态的成员方法</li>
+</ul>
+<p>​        静态的成员方法（被static修饰符修饰过的成员方法）</p>
+<ul>
+<li>能访问静态的成员变量</li>
+<li>能访问静态的成员方法</li>
+</ul>
+<p>​        <strong>总结：静态成员方法只能访问静态成员</strong></p>
+<h1 id="二、多态"><a href="#二、多态" class="headerlink" title="二、多态"></a>二、多态</h1><h4 id="1-1-多态概述"><a href="#1-1-多态概述" class="headerlink" title="1.1 多态概述"></a>1.1 多态概述</h4><p>同一个对象，在不同时刻表现出来的不同形态</p>
+<p>例：猫</p>
+<p>可以说猫是猫：<strong>猫 cat = new 猫（）；</strong></p>
+<p>也可以说猫是动物：<strong>动物 animal = new 猫（）；</strong></p>
+<p>这里猫在不同时刻表现出来了不同的形态，这就是多态</p>
+<p>多态的前提和体现</p>
+<ul>
+<li><p>有继承/实现关系</p>
+</li>
+<li><p>有方法重写</p>
+</li>
+<li><p>有父类引用指向子类</p>
+</li>
+<li><p>```java<br>Animal animal = new Cat();   //这就是父类引用指向子类</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#### 1.2 多态中成员访问特点</span><br><span class="line"></span><br><span class="line">+ **成员变量：**编译看左边，运行看左边</span><br><span class="line">+ **成员方法：**编译看左边，运行看右边</span><br><span class="line"></span><br><span class="line">​		为什么成员变量和成员方法的访问不一样？</span><br><span class="line"></span><br><span class="line">+ 因为成员方法有重写，而成员变量没有</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#### 1.3 多态的好处和弊端</span><br><span class="line"></span><br><span class="line">+ 多态的好处：提高程序的拓展性</span><br><span class="line"></span><br><span class="line">​				具体体现：定义方法的时候，使用父类型作为参数，将来在使用的时候，使用具体的子类型参与操作</span><br><span class="line"></span><br><span class="line">+ 多态的弊端：不能使用子类的特有功能（不能使用子类的成员方法）</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#### 1.4 多态中的转型</span><br><span class="line"></span><br><span class="line">+ 向上转型</span><br><span class="line"></span><br><span class="line">​			从子到父</span><br><span class="line"></span><br><span class="line">​			父类引用指向子类对象</span><br><span class="line"></span><br><span class="line">+ 向下转型</span><br><span class="line"></span><br><span class="line">​			从父到子</span><br><span class="line"></span><br><span class="line">​			父类引用转为子类对象</span><br><span class="line"></span><br><span class="line">```java</span><br><span class="line">public class AnimalDemo &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        //多态</span><br><span class="line">        Animal a = new Cat(); // 向上转型</span><br><span class="line">        a.eat();</span><br><span class="line"></span><br><span class="line">        // 向下转型</span><br><span class="line">    	Cat c = (Cat)a;</span><br><span class="line">    	c.eat();</span><br><span class="line">        c.playGame();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="三、抽象类"><a href="#三、抽象类" class="headerlink" title="三、抽象类"></a>三、抽象类</h1><pre><code>####     1.1 抽象类概述
+</code></pre><p>​        在Java中，一个<strong>没用方法体</strong>的方法应该定义为<strong>抽象方法</strong>，而类中如果有<strong>抽象方法</strong>，则该类必须定义为<strong>抽象类</strong></p>
+<pre><code>####     1.2 抽象类的特点
+</code></pre><ul>
+<li><p>抽象类和抽象方法必须用<strong>abstract</strong>关键字修饰</p>
+<p>​        public <strong>abstract </strong>class 类名{}</p>
+<p>​        public <strong>abstract </strong>void eat();</p>
+</li>
+<li><p>抽象类中不一定有抽象方法，有抽象方法的类一定是抽象类</p>
+</li>
+<li><p>抽象类不能实例化</p>
+</li>
+</ul>
+<p>​                可以参照抽象的方式，通过子类对象实例化，这叫抽象类多态</p>
+<ul>
+<li>抽象类的子类</li>
+</ul>
+<p>​                要么重写抽象类中的所有抽象方法</p>
+<p>​                要么是抽象类（把子类也定义成抽象类）</p>
+<h4 id="1-3-抽象类的成员特点"><a href="#1-3-抽象类的成员特点" class="headerlink" title="1.3 抽象类的成员特点"></a>1.3 抽象类的成员特点</h4><ul>
+<li>成员变量</li>
+</ul>
+<p>​                可以是变量</p>
+<p>​                也可以是常量</p>
+<ul>
+<li>构造方法</li>
+</ul>
+<p>​                有构造方法，但是不能实例化</p>
+<p>​                构造方法的作用？  用于子类访问父类数据的初始化</p>
+<ul>
+<li>成员方法</li>
+</ul>
+<p>​                可以有抽象方法：限定子类必须完成某些动作</p>
+<p>​                也可以有非抽象方法：提高代码复用性</p>
+<h1 id="四、接口"><a href="#四、接口" class="headerlink" title="四、接口"></a>四、接口</h1><h4 id="1-1-接口概述"><a href="#1-1-接口概述" class="headerlink" title="1.1 接口概述"></a>1.1 接口概述</h4><p>​    接口就是一种<strong>公共的规范标准</strong>，只要符合规范标准，都可以通用Java中的接口，更多的体现在<strong>对行为的抽象</strong></p>
+<h4 id="1-2-接口的特点"><a href="#1-2-接口的特点" class="headerlink" title="1.2 接口的特点"></a>1.2 接口的特点</h4><pre><code>+ 接口用关键字interface修饰
+</code></pre><p>​                public <strong>interface</strong> 接口名{}</p>
+<ul>
+<li>类实现接口用implements表示</li>
+</ul>
+<p>​                public class 类名 implements 接口名 {}</p>
+<ul>
+<li>接口不能实例化</li>
+</ul>
+<p>​                接口实例化按照多态的方式，通过实现类对象实例化，这叫接口多态</p>
+<p>​                多态的形式：具体类多态，<strong>抽象类多态，接口多态</strong></p>
+<p>​                多态的前提：有继承或者实现关系；有方法重写；有父（类/接口）引用指向（子/实现）类对象</p>
+<ul>
+<li>接口的实现类</li>
+</ul>
+<p>​                要么重写接口中的所有抽象方法</p>
+<p>​                要么是抽象类</p>
+<h4 id="1-3-接口的成员特点"><a href="#1-3-接口的成员特点" class="headerlink" title="1.3 接口的成员特点"></a>1.3 接口的成员特点</h4><pre><code>+ 成员变量
+</code></pre><p>​                只能是常量</p>
+<p>​                默认修饰符：<strong>public static final</strong></p>
+<ul>
+<li>构造方法</li>
+</ul>
+<p>​                接口没用构造方法，因为接口主要是对行为进行抽象的，没用具体存在</p>
+<p>​                一个类如果没用父类，默认继承Object类</p>
+<ul>
+<li>成员方法</li>
+</ul>
+<p>​                只能是抽象方法</p>
+<p>​                默认修饰符：public abstract</p>
+<h4 id="1-4-类和接口的关系"><a href="#1-4-类和接口的关系" class="headerlink" title="1.4 类和接口的关系"></a>1.4 类和接口的关系</h4><ul>
+<li>类和类的关系</li>
+</ul>
+<p>​                继承关系，只能单继承，但是可以多层继承</p>
+<ul>
+<li>类和接口的关系</li>
+</ul>
+<p>​                实现关系，可以单实现，也可以多实现，还可以在继承一个类的同时实现多个接口</p>
+<ul>
+<li>接口和接口的关系</li>
+</ul>
+<p>​                继承关系，可以单继承，也可以多继承</p>
+<h4 id="1-5-抽象类和接口的区别"><a href="#1-5-抽象类和接口的区别" class="headerlink" title="1.5 抽象类和接口的区别"></a>1.5 抽象类和接口的区别</h4><ul>
+<li>成员区别</li>
+</ul>
+<p>​            抽象类                                                            变量，常量；有构造方法；由抽象方法；也有非抽象方法</p>
+<p>​            接口                                                                常量，抽象方法</p>
+<ul>
+<li>关系区别</li>
+</ul>
+<p>​            类与类                                                             继承，单继承</p>
+<p>​            类与接口                                                         实现，可以单实现，也可以多实现</p>
+<p>​            接口与接口                                                      继承，单实现，多继承</p>
+<ul>
+<li>设计理念区别</li>
+</ul>
+<p>​            抽象类                                                              对类抽象，包括属性、行为</p>
+<p>​            接口                                                                 对行为抽象，主要是行为</p>
+<h1 id="五、内部类"><a href="#五、内部类" class="headerlink" title="五、内部类"></a>五、内部类</h1><pre><code>#### 1.1 内部类概述
+</code></pre><p>​    内部类：就是在一个类中定义一个类。 例：在一个类A的内部定义一个类B，类B就是内部类</p>
+<p>​    内部类定义格式</p>
+<ul>
+<li>格式</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> class 类名 &#123;</span><br><span class="line">    修饰符 class 类名 &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>范例</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Outer</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Inner</span> &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>内部类访问特点</p>
+</blockquote>
+<ul>
+<li>内部类可以直接访问外部类的成员，包括私有</li>
+<li>外部类要访问内部类的成员，必须创建对象</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Outer</span> &#123;</span><br><span class="line">    <span class="comment">// 创建内部类</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">class</span> <span class="title class_">Inner</span> &#123;</span><br><span class="line">        <span class="keyword">void</span> <span class="title function_">show</span><span class="params">()</span> &#123;</span><br><span class="line">            System.out.println(age);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// method()这个方法存在的意义就是调用Inner这个内部类的show()方法</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">method</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="comment">// 在method()方法里创建内部类对象，并调用</span></span><br><span class="line">        <span class="type">Inner</span> <span class="variable">in</span>  <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Inner</span>();</span><br><span class="line">        in.show();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 内部类测试类</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Demo</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// 创建Outer类对象</span></span><br><span class="line">        <span class="type">Outer</span> <span class="variable">o</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Outer</span>();</span><br><span class="line">        <span class="comment">// 调用 method() 方法就相当于调用了内部类里面的 show() 方法</span></span><br><span class="line">        o.method();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="1-2-局部内部类"><a href="#1-2-局部内部类" class="headerlink" title="1.2 局部内部类"></a>1.2 局部内部类</h4><blockquote>
+<p>局部内部类特点：</p>
+</blockquote>
+<p>​    局部内部类是在方法中定义类，所以外界是无法直接使用的，需要在方法内部创建对象并使用。</p>
+<p>​    该类可以直接访问外部的成员，也可以访问方法内的局部变量。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Outer</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> <span class="variable">num</span> <span class="operator">=</span> <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">method</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">num2</span> <span class="operator">=</span> <span class="number">20</span>;</span><br><span class="line">        <span class="keyword">class</span> <span class="title class_">Inner</span> &#123;</span><br><span class="line">            <span class="keyword">void</span> <span class="title function_">show</span><span class="params">()</span> &#123;</span><br><span class="line">                System.out.println(num);</span><br><span class="line">                System.out.println(num2);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="type">Inner</span> <span class="variable">i</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Inner</span>();</span><br><span class="line">        i.show();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">OuterDemo</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Outer</span> <span class="variable">o</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Outer</span>();</span><br><span class="line">        o.method();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="1-3-匿名内部类"><a href="#1-3-匿名内部类" class="headerlink" title="1.3 匿名内部类"></a>1.3 匿名内部类</h4><p> 前提：存在一个类或者接口，这里的类可以是具体类也可以是抽象类</p>
+<ul>
+<li>格式</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> 类名或者接口名() &#123;</span><br><span class="line">    重写方法;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>范例</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="title class_">Inter</span>() &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">show</span><span class="params">()</span> &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>  <strong>匿名内部类本质：是一个继承了该类或者实现了该接口的子类匿名对象</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">Inter</span> &#123; <span class="comment">// 这是一个接口，里面有一个show()方法</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">show</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Outer</span> &#123;</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">method</span><span class="params">()</span> &#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">Inter</span>() &#123;  <span class="comment">// n</span></span><br><span class="line"></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">show</span><span class="params">()</span> &#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;匿名内部类&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;.show();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">OuterDemo</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Outer</span> <span class="variable">o</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Outer</span>();</span><br><span class="line">        o.method();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="六、IO"><a href="#六、IO" class="headerlink" title="六、IO"></a>六、IO</h1><h4 id="字符缓冲流复制文件"><a href="#字符缓冲流复制文件" class="headerlink" title="字符缓冲流复制文件"></a>字符缓冲流复制文件</h4><ul>
+<li><p>BufferedReder      字符缓冲输入流</p>
+</li>
+<li><p>BufferedWrite        字符缓冲输出流</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.itheima.myIo.myCharStream.demo04;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    需求：</span></span><br><span class="line"><span class="comment">        使用字符缓冲流特有功能复制Java文件</span></span><br><span class="line"><span class="comment">        数据源：D:\IdeaProject\study\src\com\itheima\myIo\myOutputStream\FileOutputStreamDemo02.java</span></span><br><span class="line"><span class="comment">        目的地：D:\IdeaProject\study\src\com\itheima\myIo\myCharStream\demo04\Copy.java</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">BufferStreamDemo04</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException &#123;</span><br><span class="line">        <span class="comment">// 字符缓冲输入流</span></span><br><span class="line">        <span class="type">BufferedReader</span> <span class="variable">br</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BufferedReader</span>(<span class="keyword">new</span> <span class="title class_">FileReader</span>(<span class="string">&quot;D:\\IdeaProject\\study\\src\\com\\itheima\\myIo\\myOutputStream\\FileOutputStreamDemo02.java&quot;</span>));</span><br><span class="line">        <span class="comment">// 字符缓冲输出流</span></span><br><span class="line">        <span class="type">BufferedWriter</span> <span class="variable">bw</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BufferedWriter</span>(<span class="keyword">new</span> <span class="title class_">FileWriter</span>(<span class="string">&quot;D:\\IdeaProject\\study\\src\\com\\itheima\\myIo\\myCharStream\\demo04\\Copy.java&quot;</span>));</span><br><span class="line"></span><br><span class="line">        String line;</span><br><span class="line">        <span class="keyword">while</span> ((line = br.readLine()) != <span class="literal">null</span>) &#123;</span><br><span class="line">            System.out.println(line);</span><br><span class="line">            bw.write(line);</span><br><span class="line">            bw.newLine();</span><br><span class="line">            bw.flush();</span><br><span class="line">        &#125;</span><br><span class="line">        bw.close();</span><br><span class="line">        br.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="十一、网络编程基础"><a href="#十一、网络编程基础" class="headerlink" title="十一、网络编程基础"></a>十一、网络编程基础</h1><h4 id="1-1-网络编程概述"><a href="#1-1-网络编程概述" class="headerlink" title="1.1 网络编程概述"></a>1.1 网络编程概述</h4><p>​    计算机网络</p>
+<ul>
+<li>是指将地理位置不同的具有独立功能的多台计算机及其外部设备，通过通信线路连接起来，在网络操作<br>  系统，网络管理软件及网络通信协议的管理和协调下，实现资源共享和信息传递的计算机系统</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="D:\typoraImages\uTools_1638448732396.png" alt="uTools_1638448732396"></p>
+<p>​    网络编程</p>
+<ul>
+<li>在网络通信协议下，实现网络互连的不同计算机上运行的程序间可以进行数据交换</li>
+</ul>
+<h4 id="1-2-网络编程三要素"><a href="#1-2-网络编程三要素" class="headerlink" title="1.2 网络编程三要素"></a>1.2 网络编程三要素</h4><ol>
+<li><p><strong>IP地址</strong></p>
+<ul>
+<li>要想让网络中的计算机能够互相通信，必须为每台计算机指定一个标识号，通过这个标识号来指定要接收数<br>据的计算机和识别发送的计算机，而IP地址就是这个标识号。也就是设备的标识</li>
+</ul>
+</li>
+<li><p><strong>端口</strong></p>
+<ul>
+<li>网络的通信，本质上是两个应用程序的通信。每台计算机都有很多的应用程序，那么在网络通信时，如何区<br>分这些应用程序呢？如果说IP地址可以唯一标识网络中的设备，那么端口号就可以唯一标识设备中的应用程序<br>了。也就是应用程序的标识</li>
+</ul>
+</li>
+<li><p><strong>通信协议</strong></p>
+</li>
+</ol>
+<ul>
+<li>通过计算机网络可以使多台计算机实现连接，位于同一个网络中的计算机在进行连接和通信时需要遵守一定<br>  的规则，这就好比在道路中行驶的汽车一定要遵守交通规则一样。在计算机网络中，这些连接和通信的规则<br>  被称为网络通信协议，它对数据的传输格式、传输速率、传输步骤等做了统一规定，通信双方必须同时遵守<br>  才能完成数据交换。常见的协议有UDP协议和TCP协议</li>
+</ul>
+<h4 id="1-3-IP地址"><a href="#1-3-IP地址" class="headerlink" title="1.3 IP地址"></a>1.3 IP地址</h4><p>IP地址：是网络中设备的唯一标识</p>
+<p>IP地址分为两大类</p>
+<ul>
+<li>IPv4：是给每个连接在网络上的主机分配一个32bit地址。按照TCP/IP规定，IP地址用二进制来表示，每个IP地址长<br>  32bit，也就是4个字节。例如一个采用二进制形式的IP地址是“110000001010100000000001 01000010”，这么长<br>  的地址，处理起来也太费劲了。为了方便使用，IP地址经常被写成十进制的形式，中间使用符号“.”分隔不同的字节。<br>  于是，上面的IP地址可以表示为“192.168.1.66”。IP地址的这种表示法叫做“点分十进制表示法”，这显然比1和0容<br>  易记忆得多</li>
+<li>由于互联网的蓬勃发展，IP地址的需求量愈来愈大，但是网络地址资源有限，使得IP的分配越发紧张。为了扩大<br>  地址空间，通过IPv6重新定义地址空间，采用128位地址长度，每16个字节一组，分成8组十六进制数，这样就解决了网络地址资源数量不够的问题</li>
+</ul>
+<p>常用命令</p>
+<ul>
+<li>ipconfig：查看本机IP地址</li>
+<li>ping IP地址：检查网络是否连通</li>
+</ul>
+<p>特使IP地址：</p>
+<ul>
+<li>127.0.0.1：回送地址，可以代表本机，一般用来测试</li>
+</ul>
+<h4 id="1-4-InerAddress的使用"><a href="#1-4-InerAddress的使用" class="headerlink" title="1.4 InerAddress的使用"></a>1.4 InerAddress的使用</h4><p>为了方便我们对IP地址的获取和操作, Java提供了一个类InetAddress供我们使用</p>
+<ul>
+<li><p>InetAddress:此类表示Internet协议（IP）地址</p>
+<p>  <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="D:\typoraImages\uTools_1638448531651.png" alt="uTools_1638448531651"></p>
+</li>
+</ul>
+<h4 id="1-5-端口"><a href="#1-5-端口" class="headerlink" title="1.5 端口"></a>1.5 端口</h4><p>端口：设备上应用程序的唯一标识</p>
+<p>端口号：用两个字节表示的整数，它的取值范围是0~65535。其中，0～1023之间的端口号用于一些知名的网<br>络服务和应用，普通的应用程序需要使用1024以上的端口号。如果端口号被另外一个服务或应用所占用，会导<br>致当前程序启动失败</p>
+<h4 id="1-6-协议"><a href="#1-6-协议" class="headerlink" title="1.6 协议"></a>1.6 协议</h4><p>协议：计算机网络中，连接和通信的规则被称为网络通信协议</p>
+<p><span style="color: red"><strong>UDP协议</strong></span></p>
+<ul>
+<li>用户数据报协议(User Datagram Protocol)</li>
+<li>UDP是无连接通信协议，即在数据传输时，数据的发送端和接收端不建立逻辑连接。简单来说，当一台计算机向另外一台计算机发送数据时，发送端不会确认接收端是否存在，就会发出数据，同样接收端在收到数据时，也不会向发送端反馈是否收到数据。</li>
+<li>由于使用UDP协议消耗资源小，通信效率高，所以通常都会用于音频、视频和普通数据的传输</li>
+<li>例如视频会议通常采用UDP协议，因为这种情况即使偶尔丢失一两个数据包，也不会对接收结果产生太大影响。但是在使用UDP协议传送数据时，由于UDP的面向无连接性，不能保证数据的完整性，因此在传输重要数据时不建议使用UDP协议</li>
+</ul>
+<p><span style="color: red"><strong>TCP协议</strong></span></p>
+<ul>
+<li><p>传输控制协议（Transmission Control Protocol）</p>
+</li>
+<li><p>TCP协议是<span style="color:red">面向连接</span>的通信协议，即传输数据之前，在发送端和接收端建立逻辑连接，然后再传输数据，<br>  它提供了两台计算机之间<span style="color:red">可靠无差错</span>的数据传输。在TCP连接中必须要明确客户端与服务器端，由客户端<br>  向服务端发出连接请求，每次连接的创建都需要经过“三次握手。</p>
+</li>
+<li><p>三次握手：TCP协议中，在发送数据的准备阶段客户端与服务端之间的三次交互，以保证连接的可靠</p>
+<ul>
+<li><p>第一次握手，客户端向服务器端发出连接请求，等待服务器确认</p>
+</li>
+<li><p>第二次握手，服务器端向客户端回送一个响应，通知客户端收到了连接请求</p>
+</li>
+<li><p>第三次握手，客户端再次向服务器端发送确认信息，确认连接</p>
+<p>  <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="D:\typoraImages\uTools_1639308685029.png" alt="uTools_1639308685029"></p>
+<ul>
+<li>完成三次握手，连接建立后，客户端和服务器就可以开始进行数据传输了。这种面向连接的特性,TCP协议可以保证传输数据的安全，所以应用十分广泛。例如上传文件、下载文件、浏览网页等</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="2-UDP通信程序"><a href="#2-UDP通信程序" class="headerlink" title="2. UDP通信程序"></a>2. UDP通信程序</h4><h5 id="2-1-UDP通信原理"><a href="#2-1-UDP通信原理" class="headerlink" title="2.1 UDP通信原理"></a>2.1 UDP通信原理</h5><p>UDP协议是一种不可靠的网络协议，它在通信的两端各建立一个Socket对象，但是这两个Socket只是发送，接收数据的对象</p>
+<p>因此对于基于UDP协议的通信双方而言，没有所谓的客户端和服务器的概念</p>
+<p>Java提供了DatagramSocket类作为基于UDP协议的Socket</p>
+<h5 id="2-2-UDP发送数据"><a href="#2-2-UDP发送数据" class="headerlink" title="2.2 UDP发送数据"></a>2.2 UDP发送数据</h5><p>发送数据的步骤</p>
+<ol>
+<li>创建发送端的Socket对象(DatagramSocket)</li>
+<li>创建数据，并把数据打包</li>
+<li>调用DatagramSocket对象的方法发送数据</li>
+<li>关闭发送端</li>
+</ol>
+<p>发送数据的步骤<br>① 创建发送端的Socket对象(DatagramSocket)<br>        DatagramSocket()<br>② 创建数据，并把数据打包<br>        DatagramPacket(byte[] buf, int length, InetAddress address, int port)<br>③ 调用DatagramSocket对象的方法发送数据<br>        void send(DatagramPacket p)<br>④ 关闭发送端<br>        void close()</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.itheima.MyNet.itheima02;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.net.*;</span><br><span class="line"><span class="keyword">import</span> java.nio.charset.StandardCharsets;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    1. 创建发送端的Socket对象(DatagramSocket)</span></span><br><span class="line"><span class="comment">    2. 创建数据，并把数据打包</span></span><br><span class="line"><span class="comment">    3. 调用DatagramSocket对象的方法发送数据</span></span><br><span class="line"><span class="comment">    4. 关闭发送端</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SendDemo</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException &#123;</span><br><span class="line">        <span class="comment">// 创建发送端的Socket对象(DatagramSocket)</span></span><br><span class="line">        <span class="comment">// 构造方法：DatagramSocket() 构造数据报套接字并将其绑定到本地主机上的任何可用端口。</span></span><br><span class="line">        <span class="type">DatagramSocket</span> <span class="variable">ds</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">DatagramSocket</span>(<span class="number">3306</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 创建数据，并把数据打包</span></span><br><span class="line">        <span class="comment">// DatagramPacket(byte[] buf, int length, InetAddress address, int port)</span></span><br><span class="line">        <span class="comment">// 构造一个数据包，发送长度为 length的数据包到指定主机上的指定端口号。</span></span><br><span class="line">        <span class="type">byte</span>[] bytes = <span class="string">&quot;大头大头&quot;</span>.getBytes();</span><br><span class="line"><span class="comment">//        int len = bytes.length;</span></span><br><span class="line"><span class="comment">//        InetAddress address = InetAddress.getByName(&quot;10.102.57.46&quot;);</span></span><br><span class="line"><span class="comment">//        int port = 12345;</span></span><br><span class="line">        <span class="type">DatagramPacket</span> <span class="variable">dp</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">DatagramPacket</span>(bytes, bytes.length,InetAddress.getByName(<span class="string">&quot;2409:8a30:8a43:2240:5ef:bf78:eccc:4d5&quot;</span>),<span class="number">1219</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 调用DatagramSocket对象的方法发送数据</span></span><br><span class="line">        ds.send(dp);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 关闭发送端</span></span><br><span class="line">        ds.close();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="2-3-UDP接受数据"><a href="#2-3-UDP接受数据" class="headerlink" title="2.3 UDP接受数据"></a>2.3 UDP接受数据</h5><p>接收数据的步骤<br>① 创建接收端的Socket对象(DatagramSocket)<br>② 创建一个数据包，用于接收数据<br>③ 调用DatagramSocket对象的方法接收数据<br>④ 解析数据包，并把数据在控制台显示关闭接收端</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.itheima.MyNet.itheima02;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.net.DatagramPacket;</span><br><span class="line"><span class="keyword">import</span> java.net.DatagramSocket;</span><br><span class="line"><span class="keyword">import</span> java.net.SocketException;</span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    接收数据的步骤</span></span><br><span class="line"><span class="comment">     1. 创建接收端的Socket对象(DatagramSocket)</span></span><br><span class="line"><span class="comment">     2. 创建一个数据包，用于接收数据</span></span><br><span class="line"><span class="comment">     3. 调用DatagramSocket对象的方法接收数据</span></span><br><span class="line"><span class="comment">     4. 解析数据包，并把数据在控制台显示关闭接收端</span></span><br><span class="line"><span class="comment">     5. 关闭接收端</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ReceiveDemo</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException &#123;</span><br><span class="line">        <span class="keyword">while</span>(<span class="literal">true</span>) &#123;</span><br><span class="line">            <span class="comment">// 创建接收端的Socket对象(DatagramSocket)</span></span><br><span class="line">            <span class="type">DatagramSocket</span> <span class="variable">ds</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">DatagramSocket</span>(<span class="number">1219</span>);</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 创建一个数据包，用于接收数据</span></span><br><span class="line">            <span class="type">byte</span>[] bys = <span class="keyword">new</span> <span class="title class_">byte</span>[<span class="number">1024</span>];</span><br><span class="line">            <span class="type">DatagramPacket</span> <span class="variable">dp</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">DatagramPacket</span>(bys, bys.length);</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 调用DatagramSocket对象的方法接收数据</span></span><br><span class="line">            ds.receive(dp);</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 解析数据包，并把数据在控制台显示关闭接收端</span></span><br><span class="line">            <span class="type">byte</span>[] data = dp.getData();</span><br><span class="line">            <span class="type">int</span> <span class="variable">len</span> <span class="operator">=</span> dp.getLength();</span><br><span class="line">            <span class="type">String</span> <span class="variable">dataString</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(data,<span class="number">0</span>,len);</span><br><span class="line">            System.out.println(<span class="string">&quot;数据是：&quot;</span> + dataString);</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 关闭接收端</span></span><br><span class="line">            ds.close();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="3-TCP通信程序"><a href="#3-TCP通信程序" class="headerlink" title="3. TCP通信程序"></a>3. TCP通信程序</h4><h5 id="3-1-TCP通信原理"><a href="#3-1-TCP通信原理" class="headerlink" title="3.1 TCP通信原理"></a>3.1 TCP通信原理</h5><p>TCP通信协议是一种可靠的网络协议，它在通信的两端各建立一个Socket对象，从而在通信的两端形成网络虚拟链路，一旦建立了虚拟的网络链路，两端的程序就可过虚拟链路进行通信</p>
+<p>Java对基于TCP协议的网络提供了良好的封装，使用Socket对象来表示两端的通信端口，并通过Socket产生IO流来进行网络通信，Java为客户端提供了Socket类，为服务器端提供了ServerSocket类</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="D:\typoraImages\uTools_1638448732396.png" alt="uTools_1638448732396"></p>
+<h5 id="3-2-TCP发送数据"><a href="#3-2-TCP发送数据" class="headerlink" title="3.2 TCP发送数据"></a>3.2 TCP发送数据</h5><p>发送数据的步骤<br>① 创建客户端的Socket对象(Socket)</p>
+<p>​    Socket(String host, int ]port)</p>
+<p>② 获取输出流，写数据</p>
+<p>​    OutPutStream getOutPutStream()</p>
+<p>③ 释放资源</p>
+<p>​    void close()</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.itheima.MyNet.itheima04;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"><span class="keyword">import</span> java.net.InetAddress;</span><br><span class="line"><span class="keyword">import</span> java.net.Socket;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    TCP发送数据的步骤</span></span><br><span class="line"><span class="comment">    ① 创建客户端的Socket对象(Socket)</span></span><br><span class="line"><span class="comment">    ② 获取输出流，写数据</span></span><br><span class="line"><span class="comment">    ③ 释放资源</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ClientDemo</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException &#123;</span><br><span class="line">        <span class="comment">//创建客户端的Socket对象(Socket)</span></span><br><span class="line">        <span class="comment">//Socket(InetAddress address, int port) 创建流套接字并将其连接到指定IP地址的指定端口号。</span></span><br><span class="line"><span class="comment">//        Socket s = new Socket(InetAddress.getByName(&quot;10.102.57.46&quot;),3306);</span></span><br><span class="line">        <span class="comment">//Socket(String host, int port) 创建流套接字并将其连接到指定主机上的指定端口号。</span></span><br><span class="line">        <span class="type">Socket</span> <span class="variable">s</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Socket</span>(<span class="string">&quot;10.102.57.46&quot;</span>, <span class="number">3306</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//获取输出流，写数据</span></span><br><span class="line">        <span class="comment">//OutputStream getOutputStream() 返回此套接字的输出流。</span></span><br><span class="line">        <span class="type">OutputStream</span> <span class="variable">os</span> <span class="operator">=</span> s.getOutputStream();</span><br><span class="line">        os.write(<span class="string">&quot;这是tcp协议发送的数据&quot;</span>.getBytes());</span><br><span class="line"></span><br><span class="line">        <span class="comment">//释放资源</span></span><br><span class="line">        s.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="3-3-TCP接收数据"><a href="#3-3-TCP接收数据" class="headerlink" title="3.3 TCP接收数据"></a>3.3 TCP接收数据</h5><p>接收数据的步骤<br>① 创建服务器端的Socket对象(ServerSocket)<br>    ServerSocket(int port)<br>②监听客户端连接，返回一个Socket对象<br>    Socket accept()<br>③获取输入流，读数据，并把数据显示在控制台<br>    InputStream getInputStream()<br>④释放资源<br>    void close()</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.itheima.MyNet.itheima04;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStream;</span><br><span class="line"><span class="keyword">import</span> java.net.ServerSocket;</span><br><span class="line"><span class="keyword">import</span> java.net.Socket;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    接收数据的步骤</span></span><br><span class="line"><span class="comment">    ① 创建服务器端的Socket对象(ServerSocket)</span></span><br><span class="line"><span class="comment">    ② 获取输入流，读数据，并把数据显示在控制台</span></span><br><span class="line"><span class="comment">    ③ 释放资源</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ServerDemo</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException &#123;</span><br><span class="line">        <span class="comment">//创建服务器端的Socket对象(ServerSocket)</span></span><br><span class="line">        <span class="type">ServerSocket</span> <span class="variable">serverSocket</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ServerSocket</span>(<span class="number">7000</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//Socket accept() 侦听要连接到此套接字并接受它。</span></span><br><span class="line">        <span class="type">Socket</span> <span class="variable">accept</span> <span class="operator">=</span> serverSocket.accept();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//获取输入流，读数据，并把数据显示在控制台</span></span><br><span class="line">        <span class="type">InputStream</span> <span class="variable">inputStream</span> <span class="operator">=</span> accept.getInputStream();</span><br><span class="line">        <span class="type">byte</span>[] bys = <span class="keyword">new</span> <span class="title class_">byte</span>[<span class="number">1024</span>];</span><br><span class="line">        <span class="type">int</span> <span class="variable">len</span> <span class="operator">=</span> inputStream.read(bys);</span><br><span class="line">        <span class="type">String</span> <span class="variable">data</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(bys, <span class="number">0</span>, len);</span><br><span class="line">        System.out.println(<span class="string">&quot;数据是：&quot;</span> + data);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">//释放资源</span></span><br><span class="line">        serverSocket.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="十二、Lambda表达式"><a href="#十二、Lambda表达式" class="headerlink" title="十二、Lambda表达式"></a>十二、Lambda表达式</h1><h4 id="1-1-函数式编程思想概述"><a href="#1-1-函数式编程思想概述" class="headerlink" title="1.1 函数式编程思想概述"></a>1.1 函数式编程思想概述</h4><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="D:\typoraImages\uTools_1639396954033.png" alt="uTools_1639396954033"></p>
+<p>在数学中，函数就是有输入量、输出量的一套计算方案，也就是“拿数据做操作”<br>面向对象思想强调“必须通过对象的形式来做事情”<br>函数式思想则尽量忽略面向对象的复杂语法“强调做什么，而不是以什么形式去做”<br>而我们要学习的Lambda表达式就是函数式思想的体现</p>
+<h4 id="1-2-体验Lambda表达式"><a href="#1-2-体验Lambda表达式" class="headerlink" title="1.2 体验Lambda表达式"></a>1.2 体验Lambda表达式</h4><p>需求：启动一个线程，在控制台输出—句话：多线程程序启动了</p>
+<p>方式1:</p>
+<ul>
+<li>定义一个类MyRunnable实现Runnable接口，重写run()方法</li>
+<li>创建MyRunnable类的对象</li>
+<li>创建Thread类的对象，把MyRunnable的对象作为构造参数传递</li>
+<li>启动线程</li>
+</ul>
+<h1 id="javaWeb介绍"><a href="#javaWeb介绍" class="headerlink" title="javaWeb介绍"></a>javaWeb介绍</h1><p><strong>什么时javaWeb？</strong></p>
+<ul>
+<li>Web：全球广域网，也称为万维网(www)，能够通过浏览器访问的<span style="color:red">网站</span></li>
+<li>JavaWeb：是用Java技术来解决相关web互联网领域的技术栈</li>
+</ul>
+<h1 id="十三、正则表达式"><a href="#十三、正则表达式" class="headerlink" title="十三、正则表达式"></a>十三、正则表达式</h1><p>正则表达式定义了字符串组成的规则</p>
+<p>定义：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg = <span class="regexp">/^\w&#123;6,12&#125;$/</span>;  <span class="comment">//不要加引号</span></span><br></pre></td></tr></table></figure>
+<p>方法：</p>
+<ul>
+<li>test(str)：判断指定字符串是否符合规则，返回true或false</li>
+</ul>
+<h4 id="语法："><a href="#语法：" class="headerlink" title="语法："></a>语法：</h4><ul>
+<li>^：开始</li>
+<li>$：结束</li>
+<li>[ ]：代表某个范围内的单个字符,如：[0-9] 单个数字字符</li>
+<li>.：代表任意单个字符，除了换行和行结束符</li>
+<li>\w：代表单词字符：字母、数字、下划线（<em>_</em>），相当于[A-Z a-z 0-9<em>_</em>]</li>
+<li>\d：代表数字字符：相当于[0-9]</li>
+<li>量词：</li>
+<li>+：至少一个</li>
+<li>*：零个或多个</li>
+<li>？：零个或一个</li>
+<li>{x}：x个</li>
+<li>{m,}：至少m个</li>
+<li>{m,n}：至少m个，最多n个</li>
+</ul>
+<h1 id="二十、Web核心"><a href="#二十、Web核心" class="headerlink" title="二十、Web核心"></a>二十、Web核心</h1><h4 id="一、javaWeb技术栈"><a href="#一、javaWeb技术栈" class="headerlink" title="一、javaWeb技术栈"></a>一、javaWeb技术栈</h4><ul>
+<li>B/S架构：Browser/Server，浏览器/服务器 架构模式，它的特点是，客户端只需要浏览器，应用程序的逻辑和数<br>  据都存储在服务器端。浏览器只需要请求服务器，获取Web资源，服务器把Web资源发送给浏览器即可</li>
+</ul>
+<h4 id="二、HTTP"><a href="#二、HTTP" class="headerlink" title="二、HTTP"></a>二、HTTP</h4><h5 id="1-1-概念："><a href="#1-1-概念：" class="headerlink" title="1.1 概念："></a>1.1 概念：</h5><ul>
+<li>HyperText Transfer Protocol，超文本传输协议，规定了浏览器和服务器之间数据传输的规则</li>
+</ul>
+<h5 id="1-2-HTTP协议特点"><a href="#1-2-HTTP协议特点" class="headerlink" title="1.2 HTTP协议特点"></a>1.2 HTTP协议特点</h5><ol>
+<li>基于TCP协议：面向连接，安全</li>
+<li>基于请求-响应模型的：一次请求对应一次响应</li>
+<li>HTTP协议是无状态的协议：对于事务处理没有记忆能力。每次请求-响应都是独立的。<ul>
+<li>缺点：多次请求间不能共享数据。Java中使用会话技术(Cookie、Session）来解决这个问题</li>
+<li>优点：速度快</li>
+</ul>
+</li>
+</ol>
+<h5 id="1-3-HTTP-请求数据格式‘"><a href="#1-3-HTTP-请求数据格式‘" class="headerlink" title="1.3 HTTP-请求数据格式‘"></a>1.3 HTTP-请求数据格式‘</h5><p>请求数据分为3部分：<br><span style="color:red">1.请求行</span>：请求数据的第一行。其中GET表示请求方式，/表示请求资源路径，HTTP/1.1表示协议版本<br><span style="color:red">2.请求头</span>：第二行开始，格式为key：value形式。<br><span style="color:red">3.请求体</span>：POST请求的最后一部分，存放请求参数</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="D:\typoraImages\uTools_1639998349113.png" alt="uTools_1639998349113"></p>
+<p>常见的HTTP 请求头：</p>
+<ul>
+<li><p>Host: 表示请求的主机名</p>
+</li>
+<li><p>User-Agent: 浏览器版本，例如Chrome浏览器的标识类似Mozilla/5.0</p>
+<p>  Chrome/79，IE浏览器的标识类似Mozilla/5.0 (Windows NT …) like Gecko；</p>
+</li>
+<li><p>Accept：表示浏览器能接收的资源类型，如text/<em>，image/</em>或者<em>/</em>表示所有；</p>
+</li>
+<li><p>Accept-Language：表示浏览器偏好的语言，服务器可以据此返回不同语言的网页；</p>
+</li>
+<li><p>Accept-Encoding：表示浏览器可以支持的压缩类型，例如gzip, deflate等。</p>
+</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="D:\typoraImages\uTools_1639998597810.png" alt="uTools_1639998597810"></p>
+<p>GET请求和 POST请求区别：</p>
+<ol>
+<li>GET请求请求参数在请求行中，没有请求体。<pre><code>POST请求请求参数在请求体中
+</code></pre></li>
+<li>2.GET请求请求参数大小有限制，<br>   POST没有</li>
+</ol>
+<h5 id="1-HTTP-响应数据格式"><a href="#1-HTTP-响应数据格式" class="headerlink" title="1. HTTP-响应数据格式"></a>1. HTTP-响应数据格式</h5><p>响应数据分为3部分：<br><span style="color:red">1.响应行</span>： 响应数据的第一行。其中HTTP/1.1表示协议版本， 200表示响应状态码，OK表示状态码描述<br><span style="color:red">2.响应头</span>： 第二行开始，格式为key：value形式<br><span style="color:red">3.响应体</span>： 最后一部分。存放响应数据</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="D:\typoraImages\uTools_1639998972904.png" alt="uTools_1639998972904"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="D:\typoraImages\uTools_1639999011417.png" alt="uTools_1639999011417"></p>
+<p>常见的HTTP 响应头：<br>Content-Type:表示该响应内容的类型，例如text/html，image/jpeg;<br>Content-Length：表示该响应内容的长度（字节数) ;<br>Content-Encoding:表示该响应压缩算法，例如gzip;<br>Cache-Control：指示客户端应如何缓存，例如max-age=300,表示可以最多缓存300秒</p>
+<ul>
+<li>Web服务器是一个应该程序（软件），对HTTP协议的操作进行封装，使得程序员不必直接对协议进行操作，让Web开<br>  发更加便捷。主要功能是“提供网上信息浏览服务“</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="D:\typoraImages\uTools_1639999691337.png" alt="uTools_1639999691337"></p>
+<h4 id="1-5-Tomcat"><a href="#1-5-Tomcat" class="headerlink" title="1.5 Tomcat"></a>1.5 Tomcat</h4><p>概念：</p>
+<ul>
+<li><p>Tomcat是Apache软件基金会一个核心项目，是一个开源免费的轻量级Web服务器，支持Servlet/JSP，少量JavaEE规范。</p>
+</li>
+<li><p>JavaEE:Java Enterprise Edition，Java企业版。指Java企业级开发的技术规范总和。包含13项JDBC、JNDI、EJB、RMI、JSP、Servlet、XML、JMS、Java IDL、JTS、JTA、JavaMail、JAF</p>
+</li>
+<li><p>Tomcat也被称为Web容器、Servlet容器。Servlet需要依赖于Tomcat才能运行</p>
+</li>
+</ul>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><ol>
+<li>Web 服务器作用？<ul>
+<li>封装HTTP协议操作，简化开发</li>
+<li>可以将web项目部署到服务器中，对外提供网上浏览服务</li>
+</ul>
+</li>
+<li>Tomcat是一个轻量级的Web服务器，支持Servlet/JSP少量<br>JavaEE规范，也称为Web容器，Servlet容器<br>3.</li>
+</ol>
+<h1 id="二十一、IDEA中创建Maven-Web项目"><a href="#二十一、IDEA中创建Maven-Web项目" class="headerlink" title="二十一、IDEA中创建Maven Web项目"></a>二十一、IDEA中创建Maven Web项目</h1><ul>
+<li>Web项目构建</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="D:\typoraImages\uTools_1640004314147.png" alt="uTools_1640004314147"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="D:\typoraImages\uTools_1640004353879.png" alt="uTools_1640004353879"></p>
+<ul>
+<li>使用骨架创建</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="D:\typoraImages\uTools_1640087139632.png" alt="uTools_1640087139632"></p>
+<ul>
+<li>不使用骨架创建</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="C:\Users\30697\AppData\Roaming\Typora\typora-user-images\image-20211221195858886.png" alt="image-20211221195858886"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="C:\Users\30697\AppData\Roaming\Typora\typora-user-images\image-20211221200119441.png" alt="image-20211221200119441"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="C:\Users\30697\AppData\Roaming\Typora\typora-user-images\image-20211221200217093.png" alt="image-20211221200217093" style="zoom:75%;" /></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="C:\Users\30697\AppData\Roaming\Typora\typora-user-images\image-20211221200352792.png" alt="image-20211221200352792"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="C:\Users\30697\AppData\Roaming\Typora\typora-user-images\image-20211221200539688.png" alt="image-20211221200539688"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="C:\Users\30697\AppData\Roaming\Typora\typora-user-images\image-20211221200608894.png" alt="image-20211221200608894"></p>
+<h1 id="二十二、IDEA中使用Tomcat"><a href="#二十二、IDEA中使用Tomcat" class="headerlink" title="二十二、IDEA中使用Tomcat"></a>二十二、IDEA中使用Tomcat</h1><ul>
+<li>将本地Tomcat集成到IDEA中，然后进行项目部署</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="D:\typoraImages\uTools_1640086097462.png" alt="uTools_1640086097462"></p>
+<ul>
+<li>Tomcat Maven 插件</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">QingYu</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/posts/2.html">http://example.com/posts/2.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">远方小屋`Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%BC%96%E7%A8%8B/">编程</a></div><div class="post_share"><div class="social-share" data-image="https://files.catbox.moe/snn0kr.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/1.html"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://files.catbox.moe/nz2asd.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Mysql学习笔记！</div></div></a></div><div class="next-post pull-right"><a href="/posts/0.html"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img1.imgtp.com/2022/09/02/nQTXkTYB.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Hello,World！</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/1.html" title="Mysql学习笔记！"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://files.catbox.moe/nz2asd.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-12-01</div><div class="title">Mysql学习笔记！</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/favicon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">QingYu</div><div class="author-info__description">有趣的博客</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Alleyway-boop"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的博客~</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E4%BF%AE%E9%A5%B0%E7%AC%A6"><span class="toc-number">1.</span> <span class="toc-text">一、修饰符</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81final"><span class="toc-number">1.0.1.</span> <span class="toc-text">1、final</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#final%E5%85%B3%E9%94%AE%E5%AD%97%E6%98%AF%E6%9C%80%E7%BB%88%E7%9A%84%E6%84%8F%E6%80%9D%EF%BC%8C%E5%8F%AF%E4%BB%A5%E4%BF%AE%E9%A5%B0%E6%88%90%E5%91%98%E6%96%B9%E6%B3%95%EF%BC%8C%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F%EF%BC%8C%E7%B1%BB"><span class="toc-number">1.0.2.</span> <span class="toc-text">final关键字是最终的意思，可以修饰成员方法，成员变量，类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#final%E4%BF%AE%E9%A5%B0%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F"><span class="toc-number">1.0.3.</span> <span class="toc-text">final修饰局部变量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%81static"><span class="toc-number">1.0.4.</span> <span class="toc-text">2、static</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#static%E5%85%B3%E9%94%AE%E5%AD%97%E6%98%AF%E9%9D%99%E6%80%81%E7%9A%84%E6%84%8F%E6%80%9D%EF%BC%8C%E5%8F%AF%E4%BB%A5%E4%BF%AE%E9%A5%B0%E6%88%90%E5%91%98%E6%96%B9%E6%B3%95%EF%BC%8C%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F"><span class="toc-number">1.0.5.</span> <span class="toc-text">static关键字是静态的意思，可以修饰成员方法，成员变量</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%A4%9A%E6%80%81"><span class="toc-number"></span> <span class="toc-text">二、多态</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-%E5%A4%9A%E6%80%81%E6%A6%82%E8%BF%B0"><span class="toc-number">0.0.1.</span> <span class="toc-text">1.1 多态概述</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E6%8A%BD%E8%B1%A1%E7%B1%BB"><span class="toc-number"></span> <span class="toc-text">三、抽象类</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-%E6%8A%BD%E8%B1%A1%E7%B1%BB%E7%9A%84%E6%88%90%E5%91%98%E7%89%B9%E7%82%B9"><span class="toc-number">0.0.1.</span> <span class="toc-text">1.3 抽象类的成员特点</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E6%8E%A5%E5%8F%A3"><span class="toc-number"></span> <span class="toc-text">四、接口</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-%E6%8E%A5%E5%8F%A3%E6%A6%82%E8%BF%B0"><span class="toc-number">0.0.1.</span> <span class="toc-text">1.1 接口概述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-%E6%8E%A5%E5%8F%A3%E7%9A%84%E7%89%B9%E7%82%B9"><span class="toc-number">0.0.2.</span> <span class="toc-text">1.2 接口的特点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-%E6%8E%A5%E5%8F%A3%E7%9A%84%E6%88%90%E5%91%98%E7%89%B9%E7%82%B9"><span class="toc-number">0.0.3.</span> <span class="toc-text">1.3 接口的成员特点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4-%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-number">0.0.4.</span> <span class="toc-text">1.4 类和接口的关系</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-5-%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">0.0.5.</span> <span class="toc-text">1.5 抽象类和接口的区别</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E5%86%85%E9%83%A8%E7%B1%BB"><span class="toc-number"></span> <span class="toc-text">五、内部类</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-%E5%B1%80%E9%83%A8%E5%86%85%E9%83%A8%E7%B1%BB"><span class="toc-number">0.0.1.</span> <span class="toc-text">1.2 局部内部类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB"><span class="toc-number">0.0.2.</span> <span class="toc-text">1.3 匿名内部类</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AD%E3%80%81IO"><span class="toc-number"></span> <span class="toc-text">六、IO</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E7%BC%93%E5%86%B2%E6%B5%81%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6"><span class="toc-number">0.0.1.</span> <span class="toc-text">字符缓冲流复制文件</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%81%E4%B8%80%E3%80%81%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80"><span class="toc-number"></span> <span class="toc-text">十一、网络编程基础</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E6%A6%82%E8%BF%B0"><span class="toc-number">0.0.1.</span> <span class="toc-text">1.1 网络编程概述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E4%B8%89%E8%A6%81%E7%B4%A0"><span class="toc-number">0.0.2.</span> <span class="toc-text">1.2 网络编程三要素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-IP%E5%9C%B0%E5%9D%80"><span class="toc-number">0.0.3.</span> <span class="toc-text">1.3 IP地址</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4-InerAddress%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">0.0.4.</span> <span class="toc-text">1.4 InerAddress的使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-5-%E7%AB%AF%E5%8F%A3"><span class="toc-number">0.0.5.</span> <span class="toc-text">1.5 端口</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-6-%E5%8D%8F%E8%AE%AE"><span class="toc-number">0.0.6.</span> <span class="toc-text">1.6 协议</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-UDP%E9%80%9A%E4%BF%A1%E7%A8%8B%E5%BA%8F"><span class="toc-number">0.0.7.</span> <span class="toc-text">2. UDP通信程序</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-1-UDP%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86"><span class="toc-number">0.0.7.1.</span> <span class="toc-text">2.1 UDP通信原理</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-UDP%E5%8F%91%E9%80%81%E6%95%B0%E6%8D%AE"><span class="toc-number">0.0.7.2.</span> <span class="toc-text">2.2 UDP发送数据</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-3-UDP%E6%8E%A5%E5%8F%97%E6%95%B0%E6%8D%AE"><span class="toc-number">0.0.7.3.</span> <span class="toc-text">2.3 UDP接受数据</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-TCP%E9%80%9A%E4%BF%A1%E7%A8%8B%E5%BA%8F"><span class="toc-number">0.0.8.</span> <span class="toc-text">3. TCP通信程序</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#3-1-TCP%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86"><span class="toc-number">0.0.8.1.</span> <span class="toc-text">3.1 TCP通信原理</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-2-TCP%E5%8F%91%E9%80%81%E6%95%B0%E6%8D%AE"><span class="toc-number">0.0.8.2.</span> <span class="toc-text">3.2 TCP发送数据</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-3-TCP%E6%8E%A5%E6%94%B6%E6%95%B0%E6%8D%AE"><span class="toc-number">0.0.8.3.</span> <span class="toc-text">3.3 TCP接收数据</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%81%E4%BA%8C%E3%80%81Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-number"></span> <span class="toc-text">十二、Lambda表达式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3%E6%A6%82%E8%BF%B0"><span class="toc-number">0.0.1.</span> <span class="toc-text">1.1 函数式编程思想概述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-%E4%BD%93%E9%AA%8CLambda%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-number">0.0.2.</span> <span class="toc-text">1.2 体验Lambda表达式</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#javaWeb%E4%BB%8B%E7%BB%8D"><span class="toc-number"></span> <span class="toc-text">javaWeb介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%81%E4%B8%89%E3%80%81%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-number"></span> <span class="toc-text">十三、正则表达式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95%EF%BC%9A"><span class="toc-number">0.0.1.</span> <span class="toc-text">语法：</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E5%8D%81%E3%80%81Web%E6%A0%B8%E5%BF%83"><span class="toc-number"></span> <span class="toc-text">二十、Web核心</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E3%80%81javaWeb%E6%8A%80%E6%9C%AF%E6%A0%88"><span class="toc-number">0.0.1.</span> <span class="toc-text">一、javaWeb技术栈</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E3%80%81HTTP"><span class="toc-number">0.0.2.</span> <span class="toc-text">二、HTTP</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-1-%E6%A6%82%E5%BF%B5%EF%BC%9A"><span class="toc-number">0.0.2.1.</span> <span class="toc-text">1.1 概念：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-HTTP%E5%8D%8F%E8%AE%AE%E7%89%B9%E7%82%B9"><span class="toc-number">0.0.2.2.</span> <span class="toc-text">1.2 HTTP协议特点</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-HTTP-%E8%AF%B7%E6%B1%82%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F%E2%80%98"><span class="toc-number">0.0.2.3.</span> <span class="toc-text">1.3 HTTP-请求数据格式‘</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-HTTP-%E5%93%8D%E5%BA%94%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F"><span class="toc-number">0.0.2.4.</span> <span class="toc-text">1. HTTP-响应数据格式</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-5-Tomcat"><span class="toc-number">0.0.3.</span> <span class="toc-text">1.5 Tomcat</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">0.0.4.</span> <span class="toc-text">总结</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E5%8D%81%E4%B8%80%E3%80%81IDEA%E4%B8%AD%E5%88%9B%E5%BB%BAMaven-Web%E9%A1%B9%E7%9B%AE"><span class="toc-number"></span> <span class="toc-text">二十一、IDEA中创建Maven Web项目</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E5%8D%81%E4%BA%8C%E3%80%81IDEA%E4%B8%AD%E4%BD%BF%E7%94%A8Tomcat"><span class="toc-number"></span> <span class="toc-text">二十二、IDEA中使用Tomcat</span></a></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/1.html" title="Mysql学习笔记！"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://files.catbox.moe/nz2asd.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Mysql学习笔记！"/></a><div class="content"><a class="title" href="/posts/1.html" title="Mysql学习笔记！">Mysql学习笔记！</a><time datetime="2022-12-01T00:00:00.000Z" title="发表于 2022-12-01 00:00:00">2022-12-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/2.html" title="Java基础！"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://files.catbox.moe/snn0kr.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java基础！"/></a><div class="content"><a class="title" href="/posts/2.html" title="Java基础！">Java基础！</a><time datetime="2022-09-02T00:00:00.000Z" title="发表于 2022-09-02 00:00:00">2022-09-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/0.html" title="Hello,World！"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img1.imgtp.com/2022/09/02/nQTXkTYB.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello,World！"/></a><div class="content"><a class="title" href="/posts/0.html" title="Hello,World！">Hello,World！</a><time datetime="2022-09-01T00:00:00.000Z" title="发表于 2022-09-01 00:00:00">2022-09-01</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By QingYu</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><div class="aplayer no-destroy" data-id="1708664797" data-server="tencent" data-type="playlist"   data-order="list" data-fixed="true" data-preload="auto" data-autoplay="false" data-mutex="true" ></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script data-pjax>
+  function butterfly_clock_anzhiyu_injector_config(){
+    var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+    var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img class="entered loading" id="card-clock-loading" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu@1.0.6/lib/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading"/></div></div></div></div></div>';
+    console.log('已挂载butterfly_clock_anzhiyu')
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var qweather_key = '234052368fb8439cb9a5ac8c3960861a';
+  var gaud_map_key = 'e2b04289e870b005374ee030148d64fd&s=rsv3';
+  var baidu_ak_key = 'undefined';
+  var flag = 0;
+  var clock_rectangle = '112.6534116,27.96920845';
+  var clock_default_rectangle_enable = 'false';
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_clock_anzhiyu_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_clock_anzhiyu_injector_config();
+  }
+  </script><script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script><script data-pjax src="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu@1.0.6/lib/clock.min.js"></script><script data-pjax>
+  function butterfly_footer_beautify_injector_config(){
+    var parent_div_git = document.getElementById('footer-wrap');
+    var item_html = '<div id="workboard"></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" data-title="博客框架为Hexo_v5.4.0" title=""><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&amp;logo=hexo" alt=""/></a><a class="github-badge" target="_blank" href="https://butterfly.js.org/" style="margin-inline:5px" data-title="主题版本Butterfly_v4.2.2" title=""><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&amp;logo=bitdefender" alt=""/></a><a class="github-badge" target="_blank" href="https://www.jsdelivr.com/" style="margin-inline:5px" data-title="本站使用JsDelivr为静态资源提供CDN加速" title=""><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&amp;logo=jsDelivr" alt=""/></a><a class="github-badge" target="_blank" href="https://beian.miit.gov.cn/#/Integrated/index" style="margin-inline:5px" data-title="本站已在皖进行备案" title=""><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/皖ICP备2022002343号-1?style=flat&amp;logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAdCAYAAAC9pNwMAAABS2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDIgNzkuMTYwOTI0LCAyMDE3LzA3LzEzLTAxOjA2OjM5ICAgICAgICAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIi8+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgo8P3hwYWNrZXQgZW5kPSJyIj8+nhxg7wAACNlJREFUSInF1mmMVeUdx/Hv2e+5+519mJWBYQZkGxZZxLKJqBXGoLS1iXWrmihotFXaJiTWWlsbl6q1aetWd5u0VkKjNG4YEJSlOCibDLMwM8x679z9nnPP1jcVJUxf+7z6J8+LT37/Z4VvaQhfFS8+sBXbctCDGrVTKlBUH4mxAbI9Hfj0IJLsp6paJ5/tmn20N/D0wKDRMq9F/c3M2U1/V0vDfWMFh+tv/Ig1zYPMabDImPJ52OaXO87W580KggCiiOsJOJ6I3wcNFaaeNKxrt72f2fLGu4FpJ/sDQABRzD22fH7/Yze069vGc6mrDLNIJCDik10sxz2by3VdPM87xzkP9jwPTZFRVI1YUJKH+oy7n3tbvv/P2wW/UQxRWe6w4ZJRptYLHDoCuz8v5cP92XbI762O+h6UVWHnUFbPpU0fEb2A60mMJ7MUi9b/b7UgKhiZMaIxm8YLplLMDPz8hl/EH+rs8TNlUpFf32uyZJGLPDwCiTGUyTWodTN49eUCdz2YwXb9NNcObp1X98WDoufynzMVCEKGn27ayPTWBi5ad8P5iQUkJEnFLjqM9Z+hrVX0vfDe6K2dPRWsW2bwyp9EUifSJB84gdxrkR0eRgv1o/3I4fbbprJ6scqamzVO9pffec1S5ZWY2Nfz5qEy/FqOC2Y3s3j53HMSi18VRjFPwSwg+1RfVbl115vvJrsfej7UGIsYPPGgQ7JXoO+Xx5B3dHEomyJ9x1qiQozkr95h5937aFnVyouPlgJK+Ss7Fxz64OTSxSX+LHYxT2IsRW5kbGI4oHcR0jqoqTjV9se3I7/f8rS/ClS23GxSXhph6L5d9Akm7qqZhHWBQGUJ+CWGFzcg7e7m6D3/ZuW1Ea5YKdA3EojuONi813TqNi+YPYOKUhXDtCeGL26/hakLLiEcdsaHRkRAoLRc4fJrmhnekyF0apgZowWSwwkaa+rw3f8WA1GZZsPP5JEChX8dhZTN6iU6kAcs5s+dHd183SJ0VVKL57pfw6YdRQw23aeWTns47DPTALWlRTR7kMLew6hGgYqUhWXYFFUdPZ6lUBahLA8hVcOftckfi7No7VRAAQqsX1dybfvG1qwriM9mM5mJ4e4jO5Cc01dPqixbr8tWGBQUL4vjGigEEShi+xUmZ2RiR/sJ1pbS8NkgZrKAGw0TsgQsQyFaF/nfYTGprAlMFysbA1pI3mhkR6snhGsaymYGvPyFEb9IdbUE2AzFFTwpRqCtBY0wmdER+hZW4j63gcJj38V+/ErSUZXsYBfjIZHIRW0c2Z8BskCAqN+CbBJBFnyyKjR+Ez57nBxLqpfMUeSISElMBFz6x2Q6OxzWrYjyxWVzEewioU3LCS5vQY6nMUrLwNaxXvoQ59IloFSx54PPAZtQLExVZZDxsVE8J4dn6v4JYatgbSjk0owPw7RGH2ADMo88Z7L20ip8f7gC7fAo0q4+0rt7kEQDvaghVZbiPHUHcyeXcfLjT3jmpR7AYsnSScya3UR8bARVMck7Y/cB75/X6rDf3Fg2dw2jKZm5dXGm1LuAzO5DCo9v6aT0ibco5kzOvLOP+NGTFJtDpPYeZKijk/Rn3QxsfZV7txwhX7ABiZUXBsGvIvguQApNQQva9RMmTvZ2dpVUls+tX/UD7GN/Y8Ws05w6rQF+9vyzg1vZjbvMRJhXiRSU8DpTFFe0QE8S6SfPkOkZoktrB2oAhZWrwljxOPmchiSMYOWNoxNuruFU5vWeXdsojiUon345113dBBQBmTYlTimgdB8nfPo4WjaNFgN9OMEkJ02dnadVt5ki54Esqy+bzKJltVhSPbI3iN2zCyMTeXNCuG7Omm2Zok7PR2+R7jvD8ouruHhmCrB5jVZeYxLdrTP4sr4Vtd9g4MA4qc4c+6cu5NPamfw4P59t2WrA4YdXKkASf7SFivo6PDdEPmf1fRM++zp1bH/0r4I1dD1ODtOWaW4IsvPjL7nqXhloQiSPwjjgMYkMASyGEBkjhISCQwkwzve/18AbT+pk8pVY4UacQi9y+gyZ0eRAw4qHa89LXEx1LXMSPfhDJYRb59BtlLKg2WPT2l6qYl1svtGkrLYckyA1S+t5+2ATm37WCui0LSynsckDNH5zTxAchbQtkx08hDHYiW6NgC0enHBzEZ102UDH8QORdEckjEzZrNWkRydzyx17uGnDXqbUnGZ6dRPjSY91q2TqwjFuvTxLo5Zn5Qo/pumRSFcTLQtybEhGE0fQrDhhJ0VvH2lTnnHPhGtsmWan469apERjI2MH3qN7+7MEfH6ql29CbV7PvsMG32k6yU2XDhEKyZw66eJaRdrXR7CzCcqUNC3zwgymPJRCH4KRRLINimpL14A5Y4GDeOqbsPRVcfuN7Xj44pav/hFfrNT2kr2rsqf2Ibp5pEA14ZIImUyW3t5REkkTXRGQ/DGGhtLginhqCWknQDE5hKf5UFSF9Lj020Q2ul5V1AR2hr+8vuP8Vlc2zMPRxoSjnx7XBC14sDoydahSGq7KdO/HFyrBchxCVfX4fDKp4T7SCQejYODZLrYgIqgKFsNIgQqEYob8mW6yiUyb7Z64LVK/+B85xznnJ3AWzqTzuIX46mr5wLs+UUTyIriBCjRNxguHMJIFDLEEvXEOVRWnSJ0+jCd4CJoGjoedM1CLcXQziW3nMV2TSMBeOx7vWZvPt1r+cMPzE8KunaUkFn0vNrvtqXj34c1W6gzxlEQ6naIoBahtnkMwoFMwIVzSRNguMt53Aj2s4nkSlgPoGqLkICsRNF0gl8rYWuP8+11/w/OOJDEhHPKLCIpOXmi+M9AgP+maiesLifF2T1Rn5ZNj5Lo/Qc/GcPMmhdoqlEgIGzCK4PiCmJKK68p4KfF3qYGuF0qCRUkJTzleUbvQyWRTuE5xYthxQbBs7EISAbkzUFG3VfXXbK2YFi3X/eryfKKnqVBItNjJxDzH8erddC4SqWwcN5WyTtlyO1RP/Lh3eHD76MB40swmiDVJyDLYRhpc5+ub6tse/wWKbvSQEAw1awAAAABJRU5ErkJggg==" alt=""/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" data-title="本站项目由Github托管" title=""><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&amp;logo=GitHub" alt=""/></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" data-title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可" title=""><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&amp;logo=Claris" alt=""/></a></p>';
+    console.log('已挂载butterfly_footer_beautify')
+    parent_div_git.insertAdjacentHTML("beforeend",item_html)
+    }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_footer_beautify_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_footer_beautify_injector_config();
+  }
+  </script><script async src="/js/runtime/runtime.min.js"></script><div class="js-pjax"><script async="async">var arr = document.getElementsByClassName('recent-post-item');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '1.5s');
+    arr[i].setAttribute('data-wow-delay', '200ms');
+    arr[i].setAttribute('data-wow-offset', '30');
+    arr[i].setAttribute('data-wow-iteration', '1');
+  }</script><script async="async">var arr = document.getElementsByClassName('card-widget');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '');
+    arr[i].setAttribute('data-wow-delay', '200ms');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script><script async="async">var arr = document.getElementsByClassName('flink-list-card');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__flipInY');
+    arr[i].setAttribute('data-wow-duration', '3s');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script><script async="async">var arr = document.getElementsByClassName('flink-list-card');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__animated');
+    arr[i].setAttribute('data-wow-duration', '3s');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script><script async="async">var arr = document.getElementsByClassName('article-sort-item');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__slideInRight');
+    arr[i].setAttribute('data-wow-duration', '1.5s');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script><script async="async">var arr = document.getElementsByClassName('site-card');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__flipInY');
+    arr[i].setAttribute('data-wow-duration', '3s');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script><script async="async">var arr = document.getElementsByClassName('site-card');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__animated');
+    arr[i].setAttribute('data-wow-duration', '3s');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script></div><script defer src="https://cdn.cbd.int/hexo-butterfly-wowjs/lib/wow.min.js"></script><script defer src="https://cdn.cbd.int/hexo-butterfly-wowjs/lib/wow_init.js"></script><script data-pjax src="https://cdn.cbd.int/hexo-filter-gitcalendar/lib/gitcalendar.js"></script><script data-pjax>
+  function gitcalendar_injector_config(){
+      var parent_div_git = document.getElementById('recent-posts');
+      var item_html = '<div class="recent-post-item" style="width:100%;height:auto;padding:10px;"><style>#git_container{min-height: 280px}@media screen and (max-width:650px) {#git_container{min-height: 0px}}</style><div id="git_loading" style="width:10%;height:100%;margin:0 auto;display: block;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animatetransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animatetransform></path></svg><style>#git_container{display: none;}</style></div><div id="git_container"></div></div>';
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+      console.log('已挂载gitcalendar')
+      }
+
+    if( document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+        gitcalendar_injector_config()
+        GitCalendarInit("https://github.yuanfangwa.top/api?Alleyway-boop",['#ebedf0', '#f1f8ff', '#dbedff', '#c8e1ff', '#79b8ff', '#2188ff', '#0366d6', '#005cc5', '#044289', '#032f62', '#05264c'],'Alleyway-boop')
+    }
+  </script><script async src="/js/ali_font.js"></script><!-- hexo injector body_end end --><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/"});</script></body></html>
