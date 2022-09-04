@@ -16,8 +16,8 @@ function createtime() {
   let currentTimeHtml = "";
   (currentTimeHtml =
     hnum < 18 && hnum >= 9
-      ? `<img class='boardsign' src='https://cdn.cbd.int/anzhiyu-blog@2.0.3/img/badge/安知鱼-上班摸鱼中.svg' title='距离大佬也就还差一个大佬~'><span class='textTip'> <br> 本站居然运行了 ${dnum} 天</span><span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span> <i class='fas fa-heartbeat' style='color:red'></i>`
-      : `<img class='boardsign' src='https://cdn.cbd.int/anzhiyu-blog@2.0.3/img/badge/安知鱼-下班啦.svg' title='夜晚了就该开开心心的玩耍，嘿嘿~'><span class='textTip'> <br> 本站居然运行了 ${dnum} 天</span><span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span> <i class='fas fa-heartbeat' style='color:red'></i>`),
+      ? `<img style="width: 35px;height: 35px;" class='boardsign' src='https://files.catbox.moe/xxxpja.svg' title='距离大佬也就还差一个大佬~'><span class='textTip'> <br> 本站居然运行了 ${dnum} 天</span><span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span> <i class='fas fa-heartbeat' style='color:red'></i>`
+      : `<img style="width: 35px;height: 35px;" class='boardsign' src='https://files.catbox.moe/ig352r.svg' title='夜晚了就该开开心心的玩耍，嘿嘿~'><span class='textTip'> <br> 本站居然运行了 ${dnum} 天</span><span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span> <i class='fas fa-heartbeat' style='color:red'></i>`),
     document.getElementById("workboard") &&
       (document.getElementById("workboard").innerHTML = currentTimeHtml);
 }
