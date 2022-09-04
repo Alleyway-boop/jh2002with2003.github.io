@@ -65,7 +65,7 @@
       <link href="/posts/0.html"/>
       <url>/posts/0.html</url>
       
-        <content type="html"><![CDATA[<center><h1>Hello，World！</h1></center>]]></content>
+        <content type="html"><![CDATA[<!-- markdownlint-disable MD033 --><center><h1>Hello，World！</h1></center>]]></content>
       
       
       
