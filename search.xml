@@ -83,7 +83,7 @@
       <link href="/posts/0.html"/>
       <url>/posts/0.html</url>
       
-        <content type="html"><![CDATA[<!-- markdownlint-disable MD033 --><center><h1>Hello，World！</h1></center>]]></content>
+        <content type="html"><![CDATA[<!-- markdownlint-disable MD025 MD026 --><h1 id="Hello，World"><a href="#Hello，World" class="headerlink" title="Hello，World!"></a>Hello，World!</h1>]]></content>
       
       
       <categories>
