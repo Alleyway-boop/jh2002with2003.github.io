@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Android核心组件</title>
+      <link href="/posts/9490d20a.html"/>
+      <url>/posts/9490d20a.html</url>
+      
+        <content type="html"><![CDATA[<!-- markdownlint-disable MD025 --><h1 id="Android四大组件分别为Activity、Service、Content-Provider、Broadcast-Receiver"><a href="#Android四大组件分别为Activity、Service、Content-Provider、Broadcast-Receiver" class="headerlink" title="Android四大组件分别为Activity、Service、Content Provider、Broadcast Receiver"></a>Android四大组件分别为Activity、Service、Content Provider、Broadcast Receiver</h1><h2 id="一、Activity组件"><a href="#一、Activity组件" class="headerlink" title="一、Activity组件"></a>一、Activity组件</h2><p>Activity在前文的文档和课程内容中已经做过介绍和讲解，主要的作用就是一个Activity通常就是一个活动窗口，交互的载体。</p><p>一个Activity通常就是一个单独的屏幕（窗口）。<br>Activity之间通过Intent进行通信。<br>每一个Activity都必须要在AndroidManifest.xml配置文件中声明，否则系统将不识别也不执行该Activity。<br>其他内容大家可以自行复习。</p><h2 id="二、Service-服务"><a href="#二、Service-服务" class="headerlink" title="二、Service 服务"></a>二、Service 服务</h2><p>与Activity具备一个前台显示界面的活动组件不同，Android中有一个组件，没有显示画面，一般不需要与用户进行交互，该组件通常运行在后台，称之为Service服务组件。</p><p>如果想要实现自己自定义的Service，需要继承自系统的Service基类，同样也需要在清单文件AndroidMainfest.xml文件中进行声明。关于Service，可以简单总结如下：</p><p>Service通常用于在后台完成用户指定的操作。<br>Service也同样有生命周期，可以进行声明周期的管理。<br>Service分为两类：startService和bindService。<br>自定义实现的Service需要在清单配置文件中进行声明和注册。<br>startService<br>在其他组件（比如Activity）中通过startService启动一个后台服务组件，服务启动后，服务的生命周期和活动状态和启动该服务的组件不再有关系，即该服务的运行状态变得独立。</p><p>bindService<br>与startService方式启动的服务不同，如果是通过bindService启动某个服务组件，则意味着启动服务的组件和服务进行了绑定，存在一种绑定关系。如果某个时刻，调用者（比如说Activity）触法退出逻辑，关闭活动页面，则通过bindService绑定的服务也会随机停止。类似于“不求同年同月同日生生，但求同年同月同日生死”的悲壮。</p><h2 id="三、ContentProvider内容提供者"><a href="#三、ContentProvider内容提供者" class="headerlink" title="三、ContentProvider内容提供者"></a>三、ContentProvider内容提供者</h2><p>ContentProvider 通常被直译为内容提供者，组件名字很形象的诠释了该组件的作用。在Android系统中，每个应用程序是运行在不同的进程中，进程间是相互独立的。如果开发者开发的某一个应用程序，需要提供一些数据给其他应用程序，则可以通过ContentProvider将提供的数据进行暴露，其他应用程序通过ContentResolver从内容提供者中获取相应的数据。对Content Provider相关的内容进行总结：</p><p>A应用程序使用Content Provider提供共享数据，B应用程序通过Content Resolver按照规则获取数据。<br>只有需要在多个应用程序间共享数据时才需要内容提供者。例如，通讯录数据被多个应用程序使用，且必须存储在一个内容提供者中。它的好处是统一数据访问方式。<br>ContentProvider实现数据共享。<br>ContentProvider使用URI来唯一标识其数据集，这里的URI以content://作为前缀，表示该数据由ContentProvider来管理。<br>需要在清单配置文件中进行注册和声明。<br>四、Boradcast Receiver广播接受者<br>Android中的广播的工作方式类似于前文讲过的隐士Intent的工作方式，开发者可以指定接收一些事件，该事件既可以是自定义的，也可以是系统定义的。在程序运行时，可以根据指定的事件进行过滤和拦截，符合要求的事件，会被广播接收器接收，并执行相应的业务逻辑。Android系统中广播接收者的出现，实现了极大的模块的解耦。</p><p>对于广播接收者，总结如下：</p><p>广播接收者可以通过事件过滤和拦截，实现组件的通信。<br>广播接收者的注册有两种方式：动态注册（代码中注册）和静态注册（清单文件注册）。<br>动态注册：Activity关闭后，失效。静态注册：不会失效。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Android </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Android 组件 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>软件测试</title>
       <link href="/posts/7a8ab919.html"/>
       <url>/posts/7a8ab919.html</url>
