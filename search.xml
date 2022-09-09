@@ -38,14 +38,18 @@
       
       <categories>
           
-          <category> Java 编程 </category>
+          <category> Java </category>
+          
+          <category> 编程 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> JNA Java </tag>
+            <tag> JNA </tag>
+            
+            <tag> Java </tag>
             
         </tags>
       
