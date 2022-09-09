@@ -4,25 +4,7 @@
   <url>
     <loc>http://example.com/tags/index.html</loc>
     
-    <lastmod>2022-09-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/posts/4.html</loc>
-    
-    <lastmod>2022-09-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/posts/0.html</loc>
-    
-    <lastmod>2022-09-08</lastmod>
+    <lastmod>2022-09-09</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -31,16 +13,7 @@
   <url>
     <loc>http://example.com/posts/7a8ab919.html</loc>
     
-    <lastmod>2022-09-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/posts/1.html</loc>
-    
-    <lastmod>2022-09-08</lastmod>
+    <lastmod>2022-09-09</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -49,7 +22,25 @@
   <url>
     <loc>http://example.com/categories/index.html</loc>
     
-    <lastmod>2022-09-08</lastmod>
+    <lastmod>2022-09-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/posts/4.html</loc>
+    
+    <lastmod>2022-09-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/posts/0.html</loc>
+    
+    <lastmod>2022-09-09</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -58,7 +49,16 @@
   <url>
     <loc>http://example.com/posts/2.html</loc>
     
-    <lastmod>2022-09-08</lastmod>
+    <lastmod>2022-09-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/posts/1.html</loc>
+    
+    <lastmod>2022-09-09</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -67,7 +67,7 @@
 
   <url>
     <loc>http://example.com/</loc>
-    <lastmod>2022-09-08</lastmod>
+    <lastmod>2022-09-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -75,35 +75,35 @@
   
   <url>
     <loc>http://example.com/tags/Spring/</loc>
-    <lastmod>2022-09-08</lastmod>
+    <lastmod>2022-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/Hello%EF%BC%8CWorld/</loc>
-    <lastmod>2022-09-08</lastmod>
+    <lastmod>2022-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/</loc>
-    <lastmod>2022-09-08</lastmod>
+    <lastmod>2022-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/Java%E5%9F%BA%E7%A1%80/</loc>
-    <lastmod>2022-09-08</lastmod>
+    <lastmod>2022-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/MySQL/</loc>
-    <lastmod>2022-09-08</lastmod>
+    <lastmod>2022-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -112,21 +112,21 @@
   
   <url>
     <loc>http://example.com/categories/%E7%BC%96%E7%A8%8B/</loc>
-    <lastmod>2022-09-08</lastmod>
+    <lastmod>2022-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/categories/%E6%97%A5%E5%B8%B8/</loc>
-    <lastmod>2022-09-08</lastmod>
+    <lastmod>2022-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/categories/%E6%B5%8B%E8%AF%95/</loc>
-    <lastmod>2022-09-08</lastmod>
+    <lastmod>2022-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
