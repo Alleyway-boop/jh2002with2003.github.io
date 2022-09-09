@@ -20,7 +20,9 @@
       
         <tags>
             
-            <tag> Android 组件 </tag>
+            <tag> Android </tag>
+            
+            <tag> 组件 </tag>
             
         </tags>
       
@@ -38,9 +40,9 @@
       
       <categories>
           
-          <category> Java </category>
-          
           <category> 编程 </category>
+          
+          <category> Java </category>
           
       </categories>
       
