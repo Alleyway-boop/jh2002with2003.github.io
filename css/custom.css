@@ -231,7 +231,7 @@
 
   /* 鼠标图标 */
   body {
-    cursor: url('/img/x1.cur'), auto;
+    cursor: url('https://akilar.top/img/cur/arrow.cur'), auto;
   }
   a,
   [type='button']:not(:disabled),
