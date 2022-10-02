@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://example.com/posts/4.html</loc>
-    <lastmod>2022-09-27</lastmod>
-  </url>
-  <url>
-    <loc>http://example.com/posts/0.html</loc>
-    <lastmod>2022-09-27</lastmod>
-  </url>
-  <url>
-    <loc>http://example.com/posts/69c3279c.html</loc>
-    <lastmod>2022-09-27</lastmod>
-  </url>
-  <url>
-    <loc>http://example.com/posts/7a8ab919.html</loc>
-    <lastmod>2022-09-27</lastmod>
-  </url>
-  <url>
-    <loc>http://example.com/posts/1.html</loc>
-    <lastmod>2022-09-27</lastmod>
-  </url>
-  <url>
     <loc>http://example.com/posts/a9a74215.html</loc>
-    <lastmod>2022-09-27</lastmod>
+    <lastmod>2022-10-02</lastmod>
   </url>
   <url>
     <loc>http://example.com/posts/9490d20a.html</loc>
-    <lastmod>2022-09-27</lastmod>
+    <lastmod>2022-10-02</lastmod>
   </url>
   <url>
     <loc>http://example.com/posts/9b0be8b0.html</loc>
-    <lastmod>2022-09-27</lastmod>
+    <lastmod>2022-10-02</lastmod>
   </url>
   <url>
     <loc>http://example.com/posts/45e49ef2.html</loc>
-    <lastmod>2022-09-27</lastmod>
+    <lastmod>2022-10-02</lastmod>
+  </url>
+  <url>
+    <loc>http://example.com/posts/4.html</loc>
+    <lastmod>2022-10-02</lastmod>
+  </url>
+  <url>
+    <loc>http://example.com/posts/0.html</loc>
+    <lastmod>2022-10-02</lastmod>
+  </url>
+  <url>
+    <loc>http://example.com/posts/69c3279c.html</loc>
+    <lastmod>2022-10-02</lastmod>
+  </url>
+  <url>
+    <loc>http://example.com/posts/7a8ab919.html</loc>
+    <lastmod>2022-10-02</lastmod>
   </url>
   <url>
     <loc>http://example.com/posts/2.html</loc>
-    <lastmod>2022-09-27</lastmod>
+    <lastmod>2022-10-02</lastmod>
+  </url>
+  <url>
+    <loc>http://example.com/posts/1.html</loc>
+    <lastmod>2022-10-02</lastmod>
   </url>
 </urlset> 
