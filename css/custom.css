@@ -231,7 +231,7 @@
 
   /* 鼠标图标 */
   body {
-    cursor: url('/source/img/arrow.cur'), auto;
+    cursor: url('/img/arrow.cur'), auto;
   }
   a,
   [type='button']:not(:disabled),
